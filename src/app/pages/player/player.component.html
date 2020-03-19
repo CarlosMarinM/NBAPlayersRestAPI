@@ -1,0 +1,78 @@
+<h1>Jugador</h1>
+<hr />
+
+<div class="row text-right">
+  <div class="col">
+    <button routerLink="/players" class="btn btn-danger">
+      <i class="fa fa-arrow-left"></i>
+      Regresar
+    </button>
+  </div>
+</div>
+
+<div class="row animated fadeIn faster">
+  <div class="col">
+    <form (ngSubmit)="guardar(f)" #f="ngForm">
+      <div class="form-group">
+        <label>ID</label>
+        <input
+          type="text"
+          class="form-control"
+          disable="disable"
+          placeholder="ID"
+          [(ngModel)]="player.id"
+          name="id"
+        />
+      </div>
+      <div class="form-group">
+        <label>Nombre</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Nombre del jugador"
+          required
+          [(ngModel)]="player.first_name"
+          name="nombre"
+        />
+      </div>
+      <div class="form-group">
+        <label>Apellido</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Apellido del jugador"
+          [(ngModel)]="player.last_name"
+          name="apellido"
+        />
+      </div>
+      <div class="form-group">
+        <label>Altura</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Altura en pies"
+          [(ngModel)]="player.height_feet"
+          name="altura"
+        />
+      </div>
+      <div class="form-group">
+        <label>Posición</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Posición en la que juega"
+          [(ngModel)]="player.position"
+          name="posicion"
+        />
+      </div>
+
+      <hr />
+      <div class="form-group text-center">
+        <button type="submit" class="btn btn-primary w-25">
+          <i class="fa fa-save"></i>
+          Guardar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
