@@ -2,7 +2,7 @@
 
 export class PlayerModel {
 
-    id: string;
+    id: number;
     first_name: string;
     last_name: string;
     height_feet: number;

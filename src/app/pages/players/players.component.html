@@ -2,6 +2,15 @@
 <hr />
 
 <div class="row">
+    <div class="form-inline my-2 my-lg-0 text-left">
+      <button class="btn btn-primary mr-sm-2" (click)="buscarPlayer(buscarId.value, buscarNombre.value, buscarPosicion.value)">
+        <i class="fa fa-search"></i>
+        Buscar
+      </button>
+      <input class="form-control mr-sm-2" type="number" placeholder="ID" aria-label="Search" (keyup.enter)="buscarPlayer(buscarId.value, buscarNombre.value, buscarPosicion.value)" #buscarId>
+      <input class="form-control mr-sm-2" type="text" placeholder="Nombre" aria-label="Search" (keyup.enter)="buscarPlayer(buscarId.value, buscarNombre.value, buscarPosicion.value)" #buscarNombre>
+      <input class="form-control mr-sm-2" type="text" placeholder="Posición" aria-label="Search" (keyup.enter)="buscarPlayer(buscarId.value, buscarNombre.value, buscarPosicion.value)" #buscarPosicion>
+    </div>
   <div class="col text-right">
     <button routerLink="/player/nuevo" class="btn btn-primary">
       <i class="fa fa-plus"></i>

@@ -32,4 +32,8 @@ export class PlayersComponent implements OnInit {
     this.playersService.borrarPlayer(i);
   }
 
+  buscarPlayer(id: number, nombre: string, posicion: string) {
+    this.players = this.playersService.buscarPlayers(id, nombre, posicion);
+  }
+
 }
